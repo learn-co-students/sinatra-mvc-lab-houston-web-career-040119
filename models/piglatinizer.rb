@@ -4,7 +4,7 @@ class PigLatinizer
 
   def piglatinize_word(word)
     ending = word.match(/\A[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]+/)
-    beginning = word.match(/[aeiouAEIOU][a-z]*\z/)
+    beginning = word.match(/[aeiouAEIOU][a-zA-Z]*\z/)
     if !ending
       if beginning
         beginning[0] + "way"
